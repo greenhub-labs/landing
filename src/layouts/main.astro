@@ -1,16 +1,44 @@
 ---
 import '../styles/global.css';
+
+interface Props {
+	content: {
+		title: string;
+		description?: string;
+		image?: string;
+	};
+}
+
 const { content } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{content.title}</title>
+		<meta name="description" content={content.description || "GreenHub - Automatiza y monitoriza tu huerto con tecnología open-core y modular"} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://greenhub-labs.com/" />
+		<meta property="og:title" content={content.title} />
+		<meta property="og:description" content={content.description || "GreenHub - Automatiza y monitoriza tu huerto con tecnología open-core y modular"} />
+		<meta property="og:image" content={content.image || "/og-image.jpg"} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://greenhub-labs.com/" />
+		<meta property="twitter:title" content={content.title} />
+		<meta property="twitter:description" content={content.description || "GreenHub - Automatiza y monitoriza tu huerto con tecnología open-core y modular"} />
+		<meta property="twitter:image" content={content.image || "/og-image.jpg"} />
+		
+		<!-- Preconnect to external domains -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	</head>
-	<body>
+	<body class="antialiased">
 		<slot />
 	</body>
 </html>

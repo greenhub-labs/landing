@@ -1,0 +1,52 @@
+---
+// Header component for GreenHub landing page
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex items-center justify-between h-16">
+			<!-- Logo -->
+			<div class="flex items-center">
+				<a href="/" class="flex items-center space-x-2">
+					<div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
+						<span class="text-white font-bold text-lg">🌿</span>
+					</div>
+					<span class="text-xl font-bold text-gray-900 dark:text-white">GreenHub</span>
+				</a>
+			</div>
+
+			<!-- Navigation -->
+			<nav class="hidden md:flex items-center space-x-8">
+				<a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+					Características
+				</a>
+				<a href="#how-it-works" class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+					Cómo funciona
+				</a>
+				<a href="#community" class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+					Comunidad
+				</a>
+				<a href="#docs" class="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+					Documentación
+				</a>
+			</nav>
+
+			<!-- CTA Buttons -->
+			<div class="flex items-center space-x-4">
+				<a href="#docs" class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+					📖 Docs
+				</a>
+				<a href="#get-started" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors">
+					🚀 Empezar
+				</a>
+			</div>
+
+			<!-- Mobile menu button -->
+			<button class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+</header> 

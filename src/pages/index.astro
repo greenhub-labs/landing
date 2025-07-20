@@ -1,11 +1,444 @@
 ---
+import Header from "@/components/Header.astro";
 import MainLayout from "@/layouts/main.astro";
-import { Button } from "@/components/ui/button";
 ---
 
-<MainLayout content={{ title: 'Astro + TailwindCSS' }}>
-	<div class="grid place-items-center h-screen content-center">
-		<Button>Tailwind Button in Astro!</Button>
-		<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-	</div>
+<MainLayout content={{ 
+	title: 'GreenHub - Automatiza tu huerto con tecnología open-core',
+	description: 'GreenHub es una plataforma open-core y modular que te permite automatizar y monitorizar tu huerto con sensores, reglas personalizadas y tecnología accesible de código abierto.'
+}}>
+
+	<Header />
+
+	<!-- Hero Section -->
+	<section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden pt-20 pb-16">
+		<!-- Organic background patterns -->
+		<div class="absolute inset-0">
+			<div class="absolute top-20 left-10 w-32 h-32 bg-green-200 dark:bg-green-800 rounded-full opacity-20 animate-pulse"></div>
+			<div class="absolute bottom-20 right-10 w-24 h-24 bg-emerald-300 dark:bg-emerald-700 rounded-full opacity-30 animate-bounce"></div>
+			<div class="absolute top-1/2 left-1/4 w-16 h-16 bg-teal-200 dark:bg-teal-700 rounded-full opacity-25 animate-ping"></div>
+		</div>
+		
+		<!-- Leaf decoration -->
+		<div class="absolute top-10 right-10 text-6xl opacity-10 animate-spin-slow">🌿</div>
+		<div class="absolute bottom-20 left-10 text-4xl opacity-15 animate-bounce">🌱</div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+			<div class="text-center max-w-5xl mx-auto">
+				<div class="mb-12">
+					<div class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 text-green-800 dark:text-green-200 text-sm font-medium mb-8 border border-green-200 dark:border-green-700 shadow-sm">
+						<span class="mr-2">🌱</span>
+						Open-core • Modular • DIY • Sostenible
+					</div>
+					
+					<h1 class="text-6xl md:text-8xl font-black text-gray-900 dark:text-white mb-8 leading-none">
+						Tu huerto
+						<span class="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">inteligente</span>
+						<br class="hidden sm:block" />
+						está aquí
+					</h1>
+					
+					<p class="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed font-light">
+						No más plantas sedientas. No más adivinanzas. 
+						<span class="font-semibold text-green-700 dark:text-green-300">GreenHub</span> 
+						convierte tu huerto en un ecosistema autónomo que respira tecnología open-core.
+					</p>
+				</div>
+				
+				<div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+					<a href="#waitlist" class="group inline-flex items-center px-10 py-5 text-xl font-bold text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+						<span class="mr-3">🚀</span>
+						Empezar la revolución verde
+						<span class="ml-3 group-hover:translate-x-1 transition-transform">→</span>
+					</a>
+					<a href="#how-it-works" class="group inline-flex items-center px-10 py-5 text-xl font-medium text-gray-700 dark:text-gray-300 border-3 border-gray-300 dark:border-gray-600 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+						<span class="mr-3">🔍</span>
+						Ver cómo funciona
+					</a>
+				</div>
+				
+				<div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-sm text-gray-600 dark:text-gray-400">
+					<div class="text-center">
+						<div class="text-2xl mb-2">🌿</div>
+						<span class="font-medium">100% Open Source</span>
+					</div>
+					<div class="text-center">
+						<div class="text-2xl mb-2">⚡</div>
+						<span class="font-medium">Setup en 5 min</span>
+					</div>
+					<div class="text-center">
+						<div class="text-2xl mb-2">💚</div>
+						<span class="font-medium">Sostenible</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Problem Section -->
+	<section id="problem" class="min-h-screen flex items-center bg-white dark:bg-gray-900 relative overflow-hidden py-20">
+		<!-- Background decoration -->
+		<div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"></div>
+		<div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-white dark:to-gray-900"></div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+			<div class="max-w-5xl mx-auto text-center mb-20">
+				<div class="inline-flex items-center px-4 py-2 rounded-full bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-200 text-sm font-medium mb-6">
+					⚠️ El problema real
+				</div>
+				<h2 class="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-8">
+					Tu huerto está
+					<span class="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">sufriendo</span>
+				</h2>
+				<p class="text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+					Y probablemente ni siquiera lo sabes. Las plantas no pueden hablar, pero GreenHub sí puede escucharlas.
+				</p>
+			</div>
+			
+			<div class="grid lg:grid-cols-2 gap-16 items-center">
+				<div class="space-y-8">
+					<div class="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 p-10 rounded-3xl border-2 border-red-200 dark:border-red-800 shadow-xl">
+						<div class="flex items-center mb-6">
+							<div class="text-4xl mr-4">😰</div>
+							<h3 class="text-3xl font-black text-red-800 dark:text-red-200">
+								La realidad actual
+							</h3>
+						</div>
+						<ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
+							<li class="flex items-start">
+								<span class="text-red-500 mr-3 text-xl">💸</span>
+								<span>Gastas más en plantas muertas que en el sistema</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-red-500 mr-3 text-xl">🤷‍♂️</span>
+								<span>Riegas a ciegas, sin saber si es necesario</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-red-500 mr-3 text-xl">😴</span>
+								<span>Olvidas regar cuando más lo necesitan</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-red-500 mr-3 text-xl">🌡️</span>
+								<span>No sabes si hace demasiado calor o frío</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="space-y-8">
+					<div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-10 rounded-3xl border-2 border-green-200 dark:border-green-800 shadow-xl">
+						<div class="flex items-center mb-6">
+							<div class="text-4xl mr-4">🎯</div>
+							<h3 class="text-3xl font-black text-green-800 dark:text-green-200">
+								Con GreenHub
+							</h3>
+						</div>
+						<ul class="space-y-4 text-lg text-gray-700 dark:text-gray-300">
+							<li class="flex items-start">
+								<span class="text-green-500 mr-3 text-xl">🌱</span>
+								<span>Plantas que crecen sanas y fuertes</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-500 mr-3 text-xl">💧</span>
+								<span>Riego inteligente basado en datos reales</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-500 mr-3 text-xl">📱</span>
+								<span>Control total desde tu smartphone</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-500 mr-3 text-xl">🌿</span>
+								<span>Un huerto que se cuida solo</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How it works -->
+	<section id="how-it-works" class="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden py-20">
+		<!-- Background decoration -->
+		<div class="absolute top-20 right-20 text-8xl opacity-5 animate-spin-slow">🌿</div>
+		<div class="absolute bottom-20 left-20 text-6xl opacity-5 animate-bounce">🌱</div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+			<div class="max-w-5xl mx-auto text-center mb-20">
+				<div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 text-sm font-medium mb-6">
+					🔧 Cómo funciona
+				</div>
+				<h2 class="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-8">
+					Más simple que
+					<span class="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">plantar una semilla</span>
+				</h2>
+				<p class="text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+					GreenHub está diseñado para ser tan intuitivo como regar una planta, pero con la inteligencia de un jardinero experto.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-5 gap-8">
+				<div class="text-center group">
+					<div class="bg-white dark:bg-gray-700 p-8 rounded-3xl shadow-xl mb-6 transform group-hover:scale-105 transition-all duration-300 border-2 border-transparent group-hover:border-green-200 dark:group-hover:border-green-700">
+						<div class="text-6xl mb-6 group-hover:animate-bounce">📱</div>
+						<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">1. Coloca</h3>
+						<p class="text-gray-600 dark:text-gray-300 text-lg">Solo coloca el dispositivo en tu bancal favorito</p>
+					</div>
+				</div>
+				
+				<div class="text-center group">
+					<div class="bg-white dark:bg-gray-700 p-8 rounded-3xl shadow-xl mb-6 transform group-hover:scale-105 transition-all duration-300 border-2 border-transparent group-hover:border-green-200 dark:group-hover:border-green-700">
+						<div class="text-6xl mb-6 group-hover:animate-bounce">🔌</div>
+						<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">2. Conecta</h3>
+						<p class="text-gray-600 dark:text-gray-300 text-lg">Añade sensores de humedad, temperatura y luz</p>
+					</div>
+				</div>
+				
+				<div class="text-center group">
+					<div class="bg-white dark:bg-gray-700 p-8 rounded-3xl shadow-xl mb-6 transform group-hover:scale-105 transition-all duration-300 border-2 border-transparent group-hover:border-green-200 dark:group-hover:border-green-700">
+						<div class="text-6xl mb-6 group-hover:animate-bounce">🌐</div>
+						<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">3. Monitoriza</h3>
+						<p class="text-gray-600 dark:text-gray-300 text-lg">Accede desde cualquier dispositivo, en cualquier lugar</p>
+					</div>
+				</div>
+				
+				<div class="text-center group">
+					<div class="bg-white dark:bg-gray-700 p-8 rounded-3xl shadow-xl mb-6 transform group-hover:scale-105 transition-all duration-300 border-2 border-transparent group-hover:border-green-200 dark:group-hover:border-green-700">
+						<div class="text-6xl mb-6 group-hover:animate-bounce">⚙️</div>
+						<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">4. Configura</h3>
+						<p class="text-gray-600 dark:text-gray-300 text-lg">Define tus reglas de automatización personalizadas</p>
+					</div>
+				</div>
+				
+				<div class="text-center group">
+					<div class="bg-white dark:bg-gray-700 p-8 rounded-3xl shadow-xl mb-6 transform group-hover:scale-105 transition-all duration-300 border-2 border-transparent group-hover:border-green-200 dark:group-hover:border-green-700">
+						<div class="text-6xl mb-6 group-hover:animate-bounce">🌱</div>
+						<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">5. Disfruta</h3>
+						<p class="text-gray-600 dark:text-gray-300 text-lg">GreenHub se encarga del resto mientras tú relajado</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features -->
+	<section id="features" class="min-h-screen flex items-center bg-white dark:bg-gray-900 relative overflow-hidden py-20">
+		<!-- Background decoration -->
+		<div class="absolute top-10 left-10 w-20 h-20 bg-green-200 dark:bg-green-800 rounded-full opacity-20 animate-pulse"></div>
+		<div class="absolute bottom-10 right-10 w-16 h-16 bg-emerald-300 dark:bg-emerald-700 rounded-full opacity-30 animate-bounce"></div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+			<div class="max-w-5xl mx-auto text-center mb-20">
+				<div class="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/20 text-purple-800 dark:text-purple-200 text-sm font-medium mb-6">
+					✨ Beneficios únicos
+				</div>
+				<h2 class="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-8">
+					Tu huerto
+					<span class="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">evoluciona</span>
+				</h2>
+				<p class="text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
+					GreenHub no solo automatiza tu huerto, lo transforma en un ecosistema inteligente que aprende y crece contigo.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="group bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-10 rounded-3xl border-2 border-green-200 dark:border-green-800 shadow-xl transform group-hover:scale-105 transition-all duration-300">
+					<div class="text-5xl mb-6 group-hover:animate-bounce">⏰</div>
+					<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Ahorra tiempo real</h3>
+					<p class="text-gray-600 dark:text-gray-300 text-lg">Automatiza tareas como el riego y el control ambiental. Tu huerto se cuida solo mientras tú disfrutas de la vida.</p>
+				</div>
+				
+				<div class="group bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-10 rounded-3xl border-2 border-blue-200 dark:border-blue-800 shadow-xl transform group-hover:scale-105 transition-all duration-300">
+					<div class="text-5xl mb-6 group-hover:animate-bounce">🌿</div>
+					<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Plantas más sanas</h3>
+					<p class="text-gray-600 dark:text-gray-300 text-lg">Con datos en tiempo real y reglas personalizables, tus cultivos crecerán más sanos, fuertes y productivos.</p>
+				</div>
+				
+				<div class="group bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-10 rounded-3xl border-2 border-purple-200 dark:border-purple-800 shadow-xl transform group-hover:scale-105 transition-all duration-300">
+					<div class="text-5xl mb-6 group-hover:animate-bounce">💧</div>
+					<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Ahorra agua inteligente</h3>
+					<p class="text-gray-600 dark:text-gray-300 text-lg">Optimiza el uso del agua y reduce el desperdicio con decisiones inteligentes basadas en sensores reales.</p>
+				</div>
+				
+				<div class="group bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 p-10 rounded-3xl border-2 border-yellow-200 dark:border-yellow-800 shadow-xl transform group-hover:scale-105 transition-all duration-300">
+					<div class="text-5xl mb-6 group-hover:animate-bounce">🚀</div>
+					<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Fácil como regar</h3>
+					<p class="text-gray-600 dark:text-gray-300 text-lg">Sin complicaciones técnicas. Solo conecta los dispositivos y empieza a controlar tu huerto desde una web intuitiva.</p>
+				</div>
+				
+				<div class="group bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 p-10 rounded-3xl border-2 border-indigo-200 dark:border-indigo-800 shadow-xl transform group-hover:scale-105 transition-all duration-300">
+					<div class="text-5xl mb-6 group-hover:animate-bounce">📈</div>
+					<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Crece contigo</h3>
+					<p class="text-gray-600 dark:text-gray-300 text-lg">Adapta el sistema a tus necesidades, desde un pequeño balcón hasta un huerto grande o comunitario.</p>
+				</div>
+				
+				<div class="group bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 p-10 rounded-3xl border-2 border-red-200 dark:border-red-800 shadow-xl transform group-hover:scale-105 transition-all duration-300">
+					<div class="text-5xl mb-6 group-hover:animate-bounce">🔓</div>
+					<h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Tecnología abierta</h3>
+					<p class="text-gray-600 dark:text-gray-300 text-lg">Participa, personaliza y mejora el sistema junto a una comunidad que apuesta por el código abierto y la sostenibilidad.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section id="get-started" class="min-h-screen flex items-center bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden py-20">
+		<!-- Background decoration -->
+		<div class="absolute inset-0 bg-gradient-to-br from-green-600/90 via-emerald-600/90 to-teal-600/90"></div>
+		<div class="absolute top-20 left-20 text-8xl opacity-10 animate-spin-slow">🌿</div>
+		<div class="absolute bottom-20 right-20 text-6xl opacity-10 animate-bounce">🌱</div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 text-center relative z-10">
+			<h2 class="text-5xl md:text-7xl font-black text-white mb-8">
+				¿Listo para la
+				<br class="hidden sm:block" />
+				<span class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">revolución verde</span>?
+			</h2>
+			<p class="text-2xl text-green-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+				Únete a la comunidad GreenHub y empieza a cultivar de forma más inteligente, sostenible y conectada con la naturaleza.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-6 justify-center">
+				<a href="#waitlist" class="group inline-flex items-center px-12 py-6 text-2xl font-black text-green-600 bg-white hover:bg-gray-50 rounded-3xl transition-all duration-300 transform hover:scale-105 shadow-2xl">
+					<span class="mr-4">🚀</span>
+					Empezar la revolución
+					<span class="ml-4 group-hover:translate-x-2 transition-transform">→</span>
+				</a>
+				<a href="#docs" class="group inline-flex items-center px-12 py-6 text-2xl font-bold text-white border-3 border-white rounded-3xl hover:bg-white hover:text-green-600 transition-all duration-300 transform hover:scale-105">
+					<span class="mr-4">📖</span>
+					Ver documentación
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Waitlist Section -->
+	<section id="waitlist" class="min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-green-50 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden py-20">
+		<!-- Background decoration -->
+		<div class="absolute top-10 right-10 w-24 h-24 bg-green-200 dark:bg-green-800 rounded-full opacity-20 animate-pulse"></div>
+		<div class="absolute bottom-10 left-10 w-20 h-20 bg-emerald-300 dark:bg-emerald-700 rounded-full opacity-30 animate-bounce"></div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+			<div class="max-w-3xl mx-auto text-center">
+				<div class="mb-12">
+					<div class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 text-green-800 dark:text-green-200 text-sm font-medium mb-8 border border-green-200 dark:border-green-700">
+						<span class="mr-2">🎯</span>
+						Únete a la lista de espera
+					</div>
+					<h2 class="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-8">
+						Sé el primero en
+						<span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">saberlo</span>
+					</h2>
+					<p class="text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed">
+						GreenHub está en desarrollo. Únete a nuestra lista de espera y sé el primero en conocer cuando esté disponible, además de recibir actualizaciones exclusivas sobre el proyecto.
+					</p>
+				</div>
+				
+				<div class="bg-white dark:bg-gray-700 p-12 rounded-3xl shadow-2xl max-w-lg mx-auto border-2 border-green-200 dark:border-green-700">
+					<form class="space-y-6">
+						<div>
+							<label for="email" class="block text-lg font-bold text-gray-700 dark:text-gray-300 mb-3 text-left">
+								📧 Tu email
+							</label>
+							<input 
+								type="email" 
+								id="email" 
+								name="email" 
+								required
+								placeholder="tu@email.com"
+								class="w-full px-6 py-4 text-lg border-2 border-gray-300 dark:border-gray-600 rounded-2xl focus:ring-4 focus:ring-green-500 focus:border-transparent dark:bg-gray-600 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300"
+							>
+						</div>
+						
+						<div class="flex items-start space-x-3">
+							<input 
+								type="checkbox" 
+								id="newsletter" 
+								name="newsletter"
+								class="mt-2 h-5 w-5 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+							>
+							<label for="newsletter" class="text-lg text-gray-600 dark:text-gray-400 text-left">
+								Quiero recibir actualizaciones sobre GreenHub y noticias sobre agricultura sostenible
+							</label>
+						</div>
+						
+						<button 
+							type="submit" 
+							class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-black text-xl py-5 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl"
+						>
+							📧 Unirse a la lista de espera
+						</button>
+					</form>
+					
+					<p class="text-sm text-gray-500 dark:text-gray-400 mt-6">
+						🔒 Tu email está seguro • 📧 Actualizaciones exclusivas • 🚀 Acceso anticipado
+					</p>
+				</div>
+				
+				<div class="mt-12 text-lg text-gray-600 dark:text-gray-400">
+					<span class="font-bold">✨</span> No spam, solo actualizaciones importantes. Puedes darte de baja en cualquier momento.
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 text-white py-16 relative overflow-hidden">
+		<!-- Background decoration -->
+		<div class="absolute top-10 left-10 text-4xl opacity-10">🌿</div>
+		<div class="absolute bottom-10 right-10 text-3xl opacity-10">🌱</div>
+		
+		<div class="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+			<div class="grid md:grid-cols-4 gap-12">
+				<div>
+					<h3 class="text-3xl font-black mb-6">GreenHub</h3>
+					<p class="text-gray-400 text-lg leading-relaxed">
+						Automatiza y monitoriza tu huerto con tecnología open-core y modular. Porque las plantas también merecen tecnología inteligente.
+					</p>
+				</div>
+				
+				<div>
+					<h4 class="text-xl font-bold mb-6">Producto</h4>
+					<ul class="space-y-3 text-gray-400 text-lg">
+						<li><a href="#features" class="hover:text-white transition-colors">Características</a></li>
+						<li><a href="#how-it-works" class="hover:text-white transition-colors">Cómo funciona</a></li>
+						<li><a href="#docs" class="hover:text-white transition-colors">Documentación</a></li>
+					</ul>
+				</div>
+				
+				<div id="community">
+					<h4 class="text-xl font-bold mb-6">Comunidad</h4>
+					<ul class="space-y-3 text-gray-400 text-lg">
+						<li><a href="#" class="hover:text-white transition-colors">GitHub</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Discord</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+					</ul>
+				</div>
+				
+				<div>
+					<h4 class="text-xl font-bold mb-6">Legal</h4>
+					<ul class="space-y-3 text-gray-400 text-lg">
+						<li><a href="#" class="hover:text-white transition-colors">Privacidad</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Términos</a></li>
+						<li><a href="#" class="hover:text-white transition-colors">Licencia</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+				<p class="text-lg">&copy; 2024 GreenHub. Hecho con ❤️ y código abierto para un futuro más verde.</p>
+			</div>
+		</div>
+	</footer>
+
 </MainLayout>
+
+<style>
+	@keyframes spin-slow {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+	}
+	
+	.animate-spin-slow {
+		animation: spin-slow 20s linear infinite;
+	}
+</style> 
